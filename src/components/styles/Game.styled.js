@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const StyledGame = styled.div`
+  position: relative;
+
   .grid-container {
     max-width: 1300px;
     display: grid;
@@ -8,6 +10,15 @@ const StyledGame = styled.div`
     margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 32px;
+  }
+
+  .scoreboard {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: #000000bb;
+    color: white;
+    padding: 8px 16px;
   }
 `;
 
