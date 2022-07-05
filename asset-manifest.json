@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/lol-memory-game/static/js/main.fd8e6e0e.js",
+    "main.js": "/lol-memory-game/static/js/main.7bd100e0.js",
     "static/media/background-winter.jpg": "/lol-memory-game/static/media/background-winter.f88135eee43a20e84151.jpg",
     "static/media/Mingzat-Regular.ttf": "/lol-memory-game/static/media/Mingzat-Regular.6631543786508885e4a4.ttf",
     "index.html": "/lol-memory-game/index.html",
-    "main.fd8e6e0e.js.map": "/lol-memory-game/static/js/main.fd8e6e0e.js.map"
+    "main.7bd100e0.js.map": "/lol-memory-game/static/js/main.7bd100e0.js.map"
   },
   "entrypoints": [
-    "static/js/main.fd8e6e0e.js"
+    "static/js/main.7bd100e0.js"
   ]
 }
