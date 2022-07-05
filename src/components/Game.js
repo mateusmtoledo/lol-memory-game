@@ -12,7 +12,7 @@ function Game() {
       return latestVersion;
     }
     async function fetchChampions(version) {
-      const allChampions = await fetch(`http://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`);
+      const allChampions = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/en_US/champion.json`);
       const allChampionsResponse = await allChampions.json();
       const data = allChampionsResponse.data;
       return data;
