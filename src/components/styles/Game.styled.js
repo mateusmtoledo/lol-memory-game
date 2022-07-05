@@ -9,7 +9,9 @@ const StyledGame = styled.div`
     justify-content: center;
     margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 32px;
+    gap: 2vw;
+    padding: 2vw;
+    padding-top: 4vw;
   }
 
   .scoreboard {

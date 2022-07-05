@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Mingzat', sans-serif;
     word-spacing: -1px;
     background-image: url(${backgroundWinter});
+    background-attachment: fixed;
   }
 
   #root {
