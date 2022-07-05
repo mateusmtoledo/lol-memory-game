@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 const StyledCard = styled.div`
   position: relative;
-  width: min-content;
 
   img {
     display: block;
-    height: 330px;
+    width: 100%;
   }
 
   p {
