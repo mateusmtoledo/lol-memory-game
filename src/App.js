@@ -1,6 +1,10 @@
+import Game from "./components/Game";
+
 function App() {
   return (
-    <div></div>
+    <div>
+      <Game />
+    </div>
   );
 }
 

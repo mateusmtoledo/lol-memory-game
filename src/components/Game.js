@@ -3,8 +3,7 @@ import Card from "./Card";
 import { StyledGame } from "./styles/Game.styled";
 
 function Game() {
-  const [ champions, setChampions ] = useState([{id: 'MonkeyKing', name: 'Wukong'}]);
-  
+  const [ champions, setChampions ] = useState([]);
   useEffect(() => {
     async function fetchVersion() {
       const versions = await fetch('https://ddragon.leagueoflegends.com/api/versions.json');
@@ -35,12 +34,31 @@ function Game() {
     setRandomChampions(12);
   }, []);
 
+  const [ score, setScore ] = useState(0);
+  const [ maxScore, setMaxScore ] = useState(0);
+  const [ pickedChampions, setPickedChampions ] = useState([]);
+  function pickChampion(id) {
+    if(pickedChampions.includes(id)) {
+      setScore(0);
+      setPickedChampions([]);
+    } else {
+      setPickedChampions([...pickedChampions, id]);
+      const newScore = score + 1;
+      setScore(newScore);
+      if(newScore > maxScore) setMaxScore(newScore);
+    }
+  }
+
   return (
     <StyledGame>
       <div className="grid-container">
         {champions.map((champion) => {
-          return <Card key={champion.id} championId={champion.id} championName={champion.name} />;
+          return <Card key={champion.id} championId={champion.id} championName={champion.name} pickChampion={() => pickChampion(champion.id)} />;
         })}
+      </div>
+      <div className="scoreboard">
+        <p>Score: {score}</p>
+        <p>Best Score: {maxScore}</p>
       </div>
     </StyledGame>
   );
