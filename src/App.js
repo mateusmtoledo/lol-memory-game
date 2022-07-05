@@ -1,10 +1,12 @@
 import Game from "./components/Game";
+import { GlobalStyle } from "./components/styles/Global.styled";
 
 function App() {
   return (
-    <div>
+    <>
+      <GlobalStyle />
       <Game />
-    </div>
+    </>
   );
 }
 
