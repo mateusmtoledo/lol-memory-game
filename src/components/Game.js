@@ -38,6 +38,7 @@ function Game() {
   const [ maxScore, setMaxScore ] = useState(0);
   const [ pickedChampions, setPickedChampions ] = useState([]);
   function pickChampion(id) {
+    setChampions(shuffleArray(champions));
     if(pickedChampions.includes(id)) {
       setScore(0);
       setPickedChampions([]);
@@ -47,6 +48,17 @@ function Game() {
       setScore(newScore);
       if(newScore > maxScore) setMaxScore(newScore);
     }
+  }
+
+  function shuffleArray(array) {
+    const length = array.length;
+    const copy = [...array];
+    const newArray = [];
+    for(let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * copy.length);
+      newArray[i] = copy.splice(randomIndex, 1)[0];
+    }
+    return newArray;
   }
 
   return (
